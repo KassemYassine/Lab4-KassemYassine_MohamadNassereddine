@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tkinter module &mdash; lab3_kmy05  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            lab3_kmy05
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Tkinter module</a><ul>
+<li><a class="reference internal" href="#global-variables">Global Variables</a></li>
+<li><a class="reference internal" href="#setup-actions">Setup Actions</a></li>
+<li><a class="reference internal" href="#Tkinter.Clear_Instructor_inputs"><code class="docutils literal notranslate"><span class="pre">Clear_Instructor_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.Clear_Student_inputs"><code class="docutils literal notranslate"><span class="pre">Clear_Student_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.Clear_course_inputs"><code class="docutils literal notranslate"><span class="pre">Clear_course_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.Student_edit"><code class="docutils literal notranslate"><span class="pre">Student_edit()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.Studentdelete"><code class="docutils literal notranslate"><span class="pre">Studentdelete()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.add_course"><code class="docutils literal notranslate"><span class="pre">add_course()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.add_instructor"><code class="docutils literal notranslate"><span class="pre">add_instructor()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.add_student"><code class="docutils literal notranslate"><span class="pre">add_student()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.load_data"><code class="docutils literal notranslate"><span class="pre">load_data()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.save_data"><code class="docutils literal notranslate"><span class="pre">save_data()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.savestudent"><code class="docutils literal notranslate"><span class="pre">savestudent()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.search_records"><code class="docutils literal notranslate"><span class="pre">search_records()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.treeviewupdate"><code class="docutils literal notranslate"><span class="pre">treeviewupdate()</span></code></a></li>
+<li><a class="reference internal" href="#Tkinter.update_list_deploy_courses"><code class="docutils literal notranslate"><span class="pre">update_list_deploy_courses()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lab3_kmy05</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tkinter module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Tkinter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-Tkinter">
+<span id="tkinter-module"></span><h1>Tkinter module<a class="headerlink" href="#module-Tkinter" title="Link to this heading"></a></h1>
+<p>This module initializes the system with lists for storing student, instructor, and course objects.
+An initial course ‘EECE 435L’ is created with a predefined ID and added to the course list.</p>
+<section id="global-variables">
+<h2>Global Variables<a class="headerlink" href="#global-variables" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>students<span class="classifier">list of Student</span></dt><dd><p>Stores instances of Student.</p>
+</dd>
+<dt>instructors<span class="classifier">list of Instructor</span></dt><dd><p>Stores instances of Instructor.</p>
+</dd>
+<dt>courses<span class="classifier">list of Course</span></dt><dd><p>Stores instances of Course.</p>
+</dd>
+<dt>courseXX<span class="classifier">str</span></dt><dd><p>The name of the initial course, set to ‘EECE 435L’.</p>
+</dd>
+<dt>idcourse<span class="classifier">int</span></dt><dd><p>A counter for course IDs, starting at 1.</p>
+</dd>
+</dl>
+</section>
+<section id="setup-actions">
+<h2>Setup Actions<a class="headerlink" href="#setup-actions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>An initial course is created without an assigned instructor and added to the courses list.</p></li>
+<li><p>The course ID counter is incremented to prepare for the next course addition.</p></li>
+</ul>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.Clear_Instructor_inputs">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">Clear_Instructor_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#Clear_Instructor_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.Clear_Instructor_inputs" title="Link to this definition"></a></dt>
+<dd><p>Clears all input fields in the instructor section of the user interface.
+This function resets the fields to be ready for new instructor data entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.Clear_Student_inputs">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">Clear_Student_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#Clear_Student_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.Clear_Student_inputs" title="Link to this definition"></a></dt>
+<dd><p>Clears all input fields in the student section of the user interface.
+This function resets the fields to be ready for new student data entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.Clear_course_inputs">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">Clear_course_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#Clear_course_inputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.Clear_course_inputs" title="Link to this definition"></a></dt>
+<dd><p>Clears all input fields in the course section of the user interface.
+This function resets the fields to be ready for new course data entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.Student_edit">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">Student_edit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#Student_edit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.Student_edit" title="Link to this definition"></a></dt>
+<dd><p>Edits the selected student’s data using the form in the user interface. This function allows
+for updating a student’s information currently displayed in the treeview.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.Studentdelete">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">Studentdelete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#Studentdelete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.Studentdelete" title="Link to this definition"></a></dt>
+<dd><p>Deletes the selected student from the system and updates the UI accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.add_course">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">add_course</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#add_course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.add_course" title="Link to this definition"></a></dt>
+<dd><p>Adds a new course to the global list of courses if the specified instructor exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – Uses values from user input fields.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the instructor does not exist in the global list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.add_instructor">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">add_instructor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#add_instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.add_instructor" title="Link to this definition"></a></dt>
+<dd><p>Adds a new instructor to the global list of instructors and assigns them to a selected course.
+This function retrieves values directly from the user interface, validates the inputs,
+and updates the system’s state accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – Uses values from user input fields.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If age or email validation fails, indicating invalid inputs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.add_student">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">add_student</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#add_student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.add_student" title="Link to this definition"></a></dt>
+<dd><p>Adds a new student to the global list of students and registers them for a selected course.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – Uses values from user input fields.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If age or email validation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.load_data">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.load_data" title="Link to this definition"></a></dt>
+<dd><p>Loads data of students, courses, and instructors from a JSON file.
+Reads data from a user-selected file and updates the application state accordingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.save_data">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">save_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#save_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.save_data" title="Link to this definition"></a></dt>
+<dd><p>Saves current data of students, courses, and instructors to a JSON file.
+Compiles data into structured dictionaries and prompts the user to save it in a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.savestudent">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">savestudent</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#savestudent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.savestudent" title="Link to this definition"></a></dt>
+<dd><p>Saves changes to a student’s data and updates the associated records in the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.search_records">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">search_records</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#search_records"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.search_records" title="Link to this definition"></a></dt>
+<dd><p>Searches for student, instructor, and course records based on input from user interface fields.
+Filters results based on the search criteria provided and updates the UI treeviews with these results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.treeviewupdate">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">treeviewupdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">studentList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instructorList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">courseList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#treeviewupdate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.treeviewupdate" title="Link to this definition"></a></dt>
+<dd><p>Updates the UI treeviews for students, instructors, and courses with the provided lists.</p>
+<p>Local Functions:
+- clearTreeView: Clears all items from a given treeview.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param treeview<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The treeview widget to clear.</p>
+</dd>
+<dt class="field-even">type treeview<span class="colon">:</span></dt>
+<dd class="field-even"><p>tk.Treeview</p>
+</dd>
+</dl>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>insertTreeViewData: Inserts data into a treeview based on the specified attributes of the data objects.</dt><dd><dl class="field-list simple">
+<dt class="field-odd">param treeview<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The treeview widget where data will be inserted.</p>
+</dd>
+<dt class="field-even">type treeview<span class="colon">:</span></dt>
+<dd class="field-even"><p>tk.Treeview</p>
+</dd>
+<dt class="field-odd">param dataList<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of data objects (students, instructors, or courses).</p>
+</dd>
+<dt class="field-even">type dataList<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">param attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of attributes to retrieve from each data object for display.</p>
+</dd>
+<dt class="field-even">type attributes<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>studentList</strong> (<em>list</em><em>, </em><em>optional</em>) – List of students to display, defaults to all students if None.</p></li>
+<li><p><strong>instructorList</strong> (<em>list</em><em>, </em><em>optional</em>) – List of instructors to display, defaults to all instructors if None.</p></li>
+<li><p><strong>courseList</strong> (<em>list</em><em>, </em><em>optional</em>) – List of courses to display, defaults to all courses if None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tkinter.update_list_deploy_courses">
+<span class="sig-prename descclassname"><span class="pre">Tkinter.</span></span><span class="sig-name descname"><span class="pre">update_list_deploy_courses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Tkinter.html#update_list_deploy_courses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Tkinter.update_list_deploy_courses" title="Link to this definition"></a></dt>
+<dd><p>Updates the list of course names in the user interface dropdowns for student and instructor sections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, kassem yassine.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
