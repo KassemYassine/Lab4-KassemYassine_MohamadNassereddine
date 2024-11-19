@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyQt module &mdash; lab3_mohamad_nassereddine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Classes module" href="Classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            lab3_mohamad_nassereddine
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Lab3_mhn22</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Classes.html">Classes module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PyQt module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#PyQt.Window"><code class="docutils literal notranslate"><span class="pre">Window</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.courses"><code class="docutils literal notranslate"><span class="pre">Window.courses</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.instructors"><code class="docutils literal notranslate"><span class="pre">Window.instructors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.students"><code class="docutils literal notranslate"><span class="pre">Window.students</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.SetupUI"><code class="docutils literal notranslate"><span class="pre">Window.SetupUI()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.StudentForm"><code class="docutils literal notranslate"><span class="pre">Window.StudentForm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.InstructorForm"><code class="docutils literal notranslate"><span class="pre">Window.InstructorForm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.CourseForm"><code class="docutils literal notranslate"><span class="pre">Window.CourseForm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.RecordDisplay"><code class="docutils literal notranslate"><span class="pre">Window.RecordDisplay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.CourseDropdownDeployUpdate"><code class="docutils literal notranslate"><span class="pre">Window.CourseDropdownDeployUpdate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.save_Data"><code class="docutils literal notranslate"><span class="pre">Window.save_Data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.load_Data"><code class="docutils literal notranslate"><span class="pre">Window.load_Data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.csvexport"><code class="docutils literal notranslate"><span class="pre">Window.csvexport()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.CourseDropdowndeployUpdate"><code class="docutils literal notranslate"><span class="pre">Window.CourseDropdowndeployUpdate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">Window.CourseForm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">Window.InstructorForm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">Window.RecordDisplay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.RecordDisplayupdate"><code class="docutils literal notranslate"><span class="pre">Window.RecordDisplayupdate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">Window.SetupUI()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">Window.StudentForm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.add_Course"><code class="docutils literal notranslate"><span class="pre">Window.add_Course()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.add_Instructor"><code class="docutils literal notranslate"><span class="pre">Window.add_Instructor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.add_Student"><code class="docutils literal notranslate"><span class="pre">Window.add_Student()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">Window.csvexport()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.deleteRecord"><code class="docutils literal notranslate"><span class="pre">Window.deleteRecord()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.editRecord"><code class="docutils literal notranslate"><span class="pre">Window.editRecord()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">Window.load_Data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7"><code class="docutils literal notranslate"><span class="pre">Window.save_Data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#PyQt.Window.searchRecords"><code class="docutils literal notranslate"><span class="pre">Window.searchRecords()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lab3_mohamad_nassereddine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Lab3_mhn22</a></li>
+      <li class="breadcrumb-item active">PyQt module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/PyQt.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-PyQt">
+<span id="pyqt-module"></span><h1>PyQt module<a class="headerlink" href="#module-PyQt" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyQt.Window">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyQt.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><a class="reference internal" href="_modules/PyQt.html#Window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>A main window class for the School Management System, which provides a
+graphical user interface to manage students, instructors, and courses.</p>
+<p>The <cite>Window</cite> class extends <cite>QMainWindow</cite> and sets up the main layout containing
+multiple tabs for different forms and functionalities such as adding or managing
+students, instructors, and courses, as well as viewing records.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="PyQt.Window.courses">
+<span class="sig-name descname"><span class="pre">courses</span></span><a class="headerlink" href="#PyQt.Window.courses" title="Link to this definition"></a></dt>
+<dd><p>A list of dictionaries containing course details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="PyQt.Window.instructors">
+<span class="sig-name descname"><span class="pre">instructors</span></span><a class="headerlink" href="#PyQt.Window.instructors" title="Link to this definition"></a></dt>
+<dd><p>A list of dictionaries containing instructor details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="PyQt.Window.students">
+<span class="sig-name descname"><span class="pre">students</span></span><a class="headerlink" href="#PyQt.Window.students" title="Link to this definition"></a></dt>
+<dd><p>A list of dictionaries containing student details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.SetupUI">
+<span class="sig-name descname"><span class="pre">SetupUI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.SetupUI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.SetupUI" title="Link to this definition"></a></dt>
+<dd><p>Configures the UI components of the main window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.StudentForm">
+<span class="sig-name descname"><span class="pre">StudentForm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.StudentForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.StudentForm" title="Link to this definition"></a></dt>
+<dd><p>Returns the form widget for student management.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.InstructorForm">
+<span class="sig-name descname"><span class="pre">InstructorForm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.InstructorForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.InstructorForm" title="Link to this definition"></a></dt>
+<dd><p>Returns the form widget for instructor management.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.CourseForm">
+<span class="sig-name descname"><span class="pre">CourseForm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.CourseForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.CourseForm" title="Link to this definition"></a></dt>
+<dd><p>Returns the form widget for course management.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.RecordDisplay">
+<span class="sig-name descname"><span class="pre">RecordDisplay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.RecordDisplay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.RecordDisplay" title="Link to this definition"></a></dt>
+<dd><p>Returns the widget that displays various records.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.CourseDropdownDeployUpdate">
+<span class="sig-name descname"><span class="pre">CourseDropdownDeployUpdate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyQt.Window.CourseDropdownDeployUpdate" title="Link to this definition"></a></dt>
+<dd><p>Updates course dropdown components.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.save_Data">
+<span class="sig-name descname"><span class="pre">save_Data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.save_Data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.save_Data" title="Link to this definition"></a></dt>
+<dd><p>Saves the current data to a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.load_Data">
+<span class="sig-name descname"><span class="pre">load_Data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.load_Data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.load_Data" title="Link to this definition"></a></dt>
+<dd><p>Loads data from a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.csvexport">
+<span class="sig-name descname"><span class="pre">csvexport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.csvexport"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.csvexport" title="Link to this definition"></a></dt>
+<dd><p>Exports records to a CSV file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.CourseDropdowndeployUpdate">
+<span class="sig-name descname"><span class="pre">CourseDropdowndeployUpdate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.CourseDropdowndeployUpdate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.CourseDropdowndeployUpdate" title="Link to this definition"></a></dt>
+<dd><p>Updates the dropdown lists used in the forms for selecting courses.</p>
+<p>This method refreshes the course options in all dropdown menus by first clearing
+the existing items and then repopulating them based on the current list of courses.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">CourseForm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.CourseForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Creates and returns a QWidget that contains the form for managing course information.</p>
+<p>The form includes fields for course ID, course name, instructor ID, and a field to
+enter IDs of enrolled students. Each field has a corresponding QLineEdit widget for
+user input. An ‘Add Course’ button is also provided to submit the entered information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The form widget used for entering course information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">InstructorForm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.InstructorForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>Creates and returns a QWidget that contains the form for managing instructor information.</p>
+<p>The form includes fields for instructor name, age, email, ID, and course assignment. Each field
+has a corresponding QLineEdit or QComboBox widget for user input. An ‘Add Instructor’ button
+is provided to submit the entered information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The form widget used for entering instructor information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">RecordDisplay</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.RecordDisplay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Creates and returns a QWidget that includes a table and search functionality to display
+and manage records of students, instructors, and courses.</p>
+<p>The widget incorporates a QTableWidget for displaying records with predefined columns
+for Type, ID, Name, Age, Email, and Assigned Courses. It includes a search area to filter
+records and buttons for editing and deleting records.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The widget used for displaying and managing records.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.RecordDisplayupdate">
+<span class="sig-name descname"><span class="pre">RecordDisplayupdate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.RecordDisplayupdate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.RecordDisplayupdate" title="Link to this definition"></a></dt>
+<dd><p>Refreshes the record display table with current data from students, instructors, and courses lists.</p>
+<p>This method clears the current contents of the table and repopulates it with updated data from
+the system’s records, reflecting any changes or additions made.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">SetupUI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.SetupUI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id3" title="Link to this definition"></a></dt>
+<dd><p>Sets up the user interface for the School Management System main window.</p>
+<p>It defines the main layout, adds tab widgets for different management
+sections, and initializes buttons for saving, loading, and exporting data.
+Sets the window title, dimensions, and background color.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">StudentForm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.StudentForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id4" title="Link to this definition"></a></dt>
+<dd><p>Creates and returns a QWidget that contains the form for managing student information.</p>
+<p>The form includes fields for student name, age, email, ID, and course registration.
+Each field has a corresponding QLineEdit or QComboBox widget for user input.
+An ‘Add Student’ button is also provided to submit the entered information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The form widget used for entering student information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.add_Course">
+<span class="sig-name descname"><span class="pre">add_Course</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.add_Course"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.add_Course" title="Link to this definition"></a></dt>
+<dd><p>Adds a new course with the details provided in the course form.</p>
+<p>Gathers the input from the course form, checks for the existence of the instructor by ID,
+and if found, creates a new Course object to be added to the list of courses.
+Displays a message box upon successful addition.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.add_Instructor">
+<span class="sig-name descname"><span class="pre">add_Instructor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.add_Instructor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.add_Instructor" title="Link to this definition"></a></dt>
+<dd><p>Adds a new instructor with the information provided in the instructor form.</p>
+<p>Gathers the input from the instructor form, validates the age and email,
+and if valid, creates a new Instructor object to be added to the list of instructors.
+Displays a message box upon successful addition and updates course assignments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.add_Student">
+<span class="sig-name descname"><span class="pre">add_Student</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.add_Student"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.add_Student" title="Link to this definition"></a></dt>
+<dd><p>Adds a new student with the information provided in the student form.</p>
+<p>Gathers the input from the student form, validates the age and email,
+and if valid, creates a new Student object to be added to the list of students.
+Displays a message box upon successful addition.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">csvexport</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.csvexport"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id5" title="Link to this definition"></a></dt>
+<dd><p>Exports the data of all entities (students, instructors, courses) to a CSV file.</p>
+<p>Allows the user to select a file path and saves the data in CSV format. If the operation
+is successful, it confirms completion; if an error occurs, it shows an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – Displays an error message if there is an issue during file writing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.deleteRecord">
+<span class="sig-name descname"><span class="pre">deleteRecord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.deleteRecord"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.deleteRecord" title="Link to this definition"></a></dt>
+<dd><p>Deletes a selected record from the table and updates the corresponding list of entities.</p>
+<p>This function identifies the selected record by its row index in the display table,
+determines the entity type (instructor or student), and removes the entity from its
+respective list. It then updates the display table to reflect the deletion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QMessageBox</strong> – Shows a warning if no record is selected and an information message on successful deletion.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.editRecord">
+<span class="sig-name descname"><span class="pre">editRecord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.editRecord"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.editRecord" title="Link to this definition"></a></dt>
+<dd><p>Allows editing of selected record’s details directly from the table view.</p>
+<p>This method provides functionality to edit a selected record’s email, age, or name.
+It validates the new input before updating and refreshes the record display upon successful edit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-name descname"><span class="pre">load_Data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.load_Data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id6" title="Link to this definition"></a></dt>
+<dd><p>Loads data for students, instructors, and courses from a JSON file.</p>
+<p>This method prompts the user to select a JSON file to load. It reads the file, clears the current data lists,
+and repopulates them with the loaded data. Each list (students, instructors, courses) is filled based on the
+structured content of the JSON file. This function also re-links instructors and students to their corresponding
+courses as defined in the loaded data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>QMessageBox</strong> – Provides feedback about the status of the loading operation. An information message is displayed
+    if the data loads successfully, or an error message if the file could not be read or parsed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-name descname"><span class="pre">save_Data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.save_Data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id7" title="Link to this definition"></a></dt>
+<dd><p>Saves all current data (students, instructors, courses) to a JSON file.</p>
+<p>Attempts to serialize the entire database of entities into JSON format and write it to a file.
+Provides feedback via message boxes about the success of the operation or errors encountered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – Captures and displays any exceptions as a critical error message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyQt.Window.searchRecords">
+<span class="sig-name descname"><span class="pre">searchRecords</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/PyQt.html#Window.searchRecords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#PyQt.Window.searchRecords" title="Link to this definition"></a></dt>
+<dd><p>Searches for records within the students, instructors, and courses lists based on the query entered in the search field.</p>
+<p>Updates the display table with all records that match the search query, displaying relevant details
+for each type of record (students, instructors, courses). The query can match the name, ID, or,
+in the case of courses, the course name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Classes.html" class="btn btn-neutral float-left" title="Classes module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, mohamad nassereddine.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

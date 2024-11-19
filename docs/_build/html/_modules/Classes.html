@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes &mdash; lab3_mohamad_nassereddine  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            lab3_mohamad_nassereddine
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Lab3_mhn22</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">lab3_mohamad_nassereddine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">Classes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Classes</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<div class="viewcode-block" id="Person">
+<a class="viewcode-back" href="../Classes.html#Classes.Person">[docs]</a>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a general person characterized by name, age, and email.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        name (str): The person&#39;s name.</span>
+<span class="sd">        age (int): The person&#39;s age.</span>
+<span class="sd">        _email (str): The person&#39;s email address, which is validated upon initialization.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        introduce(): Prints a greeting that includes the person&#39;s name and age.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes a new instance of a Person.</span>
+
+<span class="sd">        Validates and sets the age and email attributes. If validation fails,</span>
+<span class="sd">        these attributes may not be set.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): The name of the person.</span>
+<span class="sd">            age (int): The age of the person.</span>
+<span class="sd">            email (str): The email address of the person.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">validate_age</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        
+        <span class="k">if</span> <span class="n">validate_email</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="n">email</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+<div class="viewcode-block" id="Person.introduce">
+<a class="viewcode-back" href="../Classes.html#Classes.Person.introduce">[docs]</a>
+    <span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Prints an introductory sentence about the person. &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;and I am&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="s2">&quot;years old.&quot;</span><span class="p">)</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Student">
+<a class="viewcode-back" href="../Classes.html#Classes.Student">[docs]</a>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a student, which is a specific type of person also characterized by a student ID and registered courses.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        student_id (str): Unique identifier for the student.</span>
+<span class="sd">        registered_courses (list): List of courses the student is registered in.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        register_course(course): Registers the student in a specified course if not already registered.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">student_id</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes a new instance of a Student.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): The student&#39;s name.</span>
+<span class="sd">            age (int): The student&#39;s age.</span>
+<span class="sd">            email (str): The student&#39;s email address.</span>
+<span class="sd">            student_id (str): The student&#39;s unique identifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">student_id</span> <span class="o">=</span> <span class="n">student_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">registered_courses</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Student.register_course">
+<a class="viewcode-back" href="../Classes.html#Classes.Student.register_course">[docs]</a>
+    <span class="k">def</span> <span class="nf">register_course</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a course to the student&#39;s list of registered courses if not already added.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            course (Course): The course to register.</span>
+
+<span class="sd">        Prints a message indicating successful registration or that the course is already registered.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">course</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">registered_courses</span><span class="p">:</span>  
+            <span class="bp">self</span><span class="o">.</span><span class="n">registered_courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Registered&quot;</span><span class="p">,</span> <span class="n">course</span><span class="o">.</span><span class="n">course_name</span><span class="p">,</span> <span class="s2">&quot;successfully.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">course</span><span class="o">.</span><span class="n">course_name</span><span class="p">,</span> <span class="s2">&quot;is already registered.&quot;</span><span class="p">)</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Instructor">
+<a class="viewcode-back" href="../Classes.html#Classes.Instructor">[docs]</a>
+<span class="k">class</span> <span class="nc">Instructor</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents an instructor, a type of person characterized by an instructor ID and assigned courses.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        instructor_id (str): Unique identifier for the instructor.</span>
+<span class="sd">        assigned_courses (list): List of courses assigned to the instructor.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        assign_course(course): Assigns a course to the instructor if not already assigned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">instructor_id</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes a new instance of an Instructor.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str): The instructor&#39;s name.</span>
+<span class="sd">            age (int): The instructor&#39;s age.</span>
+<span class="sd">            email (str): The instructor&#39;s email address.</span>
+<span class="sd">            instructor_id (str): The instructor&#39;s unique identifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instructor_id</span> <span class="o">=</span> <span class="n">instructor_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assigned_courses</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Instructor.assign_course">
+<a class="viewcode-back" href="../Classes.html#Classes.Instructor.assign_course">[docs]</a>
+    <span class="k">def</span> <span class="nf">assign_course</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a course to the instructor&#39;s list of assigned courses if not already added.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            course (Course): The course to assign.</span>
+
+<span class="sd">        Prints a message indicating successful assignment or that the course is already assigned.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">course</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">assigned_courses</span><span class="p">:</span>  
+            <span class="bp">self</span><span class="o">.</span><span class="n">assigned_courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Course&quot;</span><span class="p">,</span> <span class="n">course</span><span class="o">.</span><span class="n">course_name</span><span class="p">,</span> <span class="s2">&quot;has been assigned to instructor&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The course&quot;</span><span class="p">,</span> <span class="n">course</span><span class="o">.</span><span class="n">course_name</span><span class="p">,</span> <span class="s2">&quot;is already assigned to this instructor.&quot;</span><span class="p">)</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Course">
+<a class="viewcode-back" href="../Classes.html#Classes.Course">[docs]</a>
+<span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a course characterized by a course ID, course name, the instructor, and enrolled students.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        course_id (str): Unique identifier for the course.</span>
+<span class="sd">        course_name (str): Name of the course.</span>
+<span class="sd">        instructor (Instructor): The instructor teaching the course.</span>
+<span class="sd">        enrolled_students (list): List of students enrolled in the course.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        add_student(student): Enrolls a student in the course if not already enrolled.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course_id</span><span class="p">,</span> <span class="n">course_name</span><span class="p">,</span> <span class="n">instructor</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes a new instance of a Course.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            course_id (str): The unique identifier for the course.</span>
+<span class="sd">            course_name (str): The name of the course.</span>
+<span class="sd">            instructor (Instructor): The instructor associated with the course.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_id</span> <span class="o">=</span> <span class="n">course_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span> <span class="o">=</span> <span class="n">course_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instructor</span> <span class="o">=</span> <span class="n">instructor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enrolled_students</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Course.add_student">
+<a class="viewcode-back" href="../Classes.html#Classes.Course.add_student">[docs]</a>
+    <span class="k">def</span> <span class="nf">add_student</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a student to the course&#39;s list of enrolled students if not already added.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            student (Student): The student to enroll.</span>
+
+<span class="sd">        Prints a message indicating successful enrollment or that the student is already enrolled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">student</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">enrolled_students</span><span class="p">:</span>  
+            <span class="bp">self</span><span class="o">.</span><span class="n">enrolled_students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;has been added to&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;is already enrolled in&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span><span class="p">)</span></div>
+</div>
+
+
+
+
+<div class="viewcode-block" id="save_data_to_file">
+<a class="viewcode-back" href="../Classes.html#Classes.save_data_to_file">[docs]</a>
+<span class="k">def</span> <span class="nf">save_data_to_file</span><span class="p">(</span><span class="n">instructor</span><span class="p">,</span> <span class="n">courses</span><span class="p">,</span> <span class="n">students</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Saves data about an instructor, their courses, and students to a JSON file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        instructor (Instructor): The instructor whose data is to be saved.</span>
+<span class="sd">        courses (list): A list of Course objects related to the instructor.</span>
+<span class="sd">        students (list): A list of Student objects enrolled in the courses.</span>
+<span class="sd">        filename (str): The path to the file where the data will be saved.</span>
+
+<span class="sd">    Saves the following details:</span>
+<span class="sd">    - Instructor details and the courses they are assigned.</span>
+<span class="sd">    - Course details including enrolled students.</span>
+<span class="sd">    - Student details and the courses they are registered in.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data_to_save</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;instructor&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">instructor</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">instructor</span><span class="o">.</span><span class="n">age</span><span class="p">,</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">instructor</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+            <span class="s2">&quot;instructor_id&quot;</span><span class="p">:</span> <span class="n">instructor</span><span class="o">.</span><span class="n">instructor_id</span><span class="p">,</span>
+            <span class="s2">&quot;assigned_courses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">course</span><span class="o">.</span><span class="n">course_id</span> <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">instructor</span><span class="o">.</span><span class="n">assigned_courses</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="n">data_to_save</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;course&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;course_id&quot;</span><span class="p">:</span> <span class="n">course</span><span class="o">.</span><span class="n">course_id</span><span class="p">,</span>
+            <span class="s2">&quot;course_name&quot;</span><span class="p">:</span> <span class="n">course</span><span class="o">.</span><span class="n">course_name</span><span class="p">,</span>
+            <span class="s2">&quot;instructor_id&quot;</span><span class="p">:</span> <span class="n">course</span><span class="o">.</span><span class="n">instructor</span><span class="o">.</span><span class="n">instructor_id</span><span class="p">,</span>
+            <span class="s2">&quot;enrolled_students&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">student</span><span class="o">.</span><span class="n">student_id</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">course</span><span class="o">.</span><span class="n">enrolled_students</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span>
+    <span class="p">])</span>
+
+    <span class="n">data_to_save</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;student&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">student</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">student</span><span class="o">.</span><span class="n">age</span><span class="p">,</span>
+            <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="n">student</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+            <span class="s2">&quot;student_id&quot;</span><span class="p">:</span> <span class="n">student</span><span class="o">.</span><span class="n">student_id</span><span class="p">,</span>
+            <span class="s2">&quot;registered_courses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">course</span><span class="o">.</span><span class="n">course_id</span> <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">student</span><span class="o">.</span><span class="n">registered_courses</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span>
+    <span class="p">])</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data_to_save</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="load_data_from_file">
+<a class="viewcode-back" href="../Classes.html#Classes.load_data_from_file">[docs]</a>
+<span class="k">def</span> <span class="nf">load_data_from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Loads data about an instructor, their courses, and students from a JSON file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filename (str): The path to the file from which data will be loaded.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A tuple containing the loaded instructor object, a list of course objects, and a list of student objects.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If there is an issue with the course or student data linkage.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+
+    <span class="n">instructor</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;instructor&#39;</span><span class="p">:</span>
+            <span class="n">instructor</span> <span class="o">=</span> <span class="n">Instructor</span><span class="p">(</span>
+                <span class="n">item</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;instructor_id&#39;</span><span class="p">]</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;course&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">instructor</span><span class="p">:</span>  
+                <span class="n">course</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;course_id&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;course_name&#39;</span><span class="p">],</span> <span class="n">instructor</span><span class="p">)</span>
+                <span class="n">courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;student&#39;</span><span class="p">:</span>
+            <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span>
+                <span class="n">item</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">],</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;student_id&#39;</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">course_id</span> <span class="ow">in</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;registered_courses&#39;</span><span class="p">]:</span>
+                <span class="n">found_course</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">course</span> <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span> <span class="k">if</span> <span class="n">course</span><span class="o">.</span><span class="n">course_id</span> <span class="o">==</span> <span class="n">course_id</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">found_course</span><span class="p">:</span>
+                    <span class="n">found_course</span><span class="o">.</span><span class="n">add_student</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">instructor</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">course_id</span> <span class="ow">in</span> <span class="n">instructor</span><span class="o">.</span><span class="n">assigned_courses</span><span class="p">:</span>
+            <span class="n">found_course</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">course</span> <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span> <span class="k">if</span> <span class="n">course</span><span class="o">.</span><span class="n">course_id</span> <span class="o">==</span> <span class="n">course_id</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">found_course</span><span class="p">:</span>
+                <span class="n">instructor</span><span class="o">.</span><span class="n">assign_course</span><span class="p">(</span><span class="n">found_course</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">courses</span><span class="p">,</span> <span class="n">students</span></div>
+
+
+<div class="viewcode-block" id="validate_age">
+<a class="viewcode-back" href="../Classes.html#Classes.validate_age">[docs]</a>
+<span class="k">def</span> <span class="nf">validate_age</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validates if the provided age is an integer and non-negative.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        age (int): The age to validate.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the age is valid, raises ValueError otherwise.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If age is not an integer or is negative.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Age must be an integer.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Age cannot be negative.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="validate_email">
+<a class="viewcode-back" href="../Classes.html#Classes.validate_email">[docs]</a>
+<span class="k">def</span> <span class="nf">validate_email</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validates if the provided email matches a specific pattern.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        email (str): The email to validate.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the email is valid, raises ValueError otherwise.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If the email does not match the expected pattern.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid email format.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, mohamad nassereddine.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
