@@ -14,8 +14,8 @@ This application provides an interface for managing students, instructors, and c
 
 Clone the repository to your local machine:
 ```bash
-git clone https://github.com/username/repository-name.git
-cd repository-name
+git clone https://github.com/KassemYassine/Lab4-KassemYassine_MohamadNassereddine.git
+cd Lab4-KassemYassine_MohamadNassereddine
 ```
 
 Install the required Python packages:
@@ -78,5 +78,5 @@ Contributions to the project are welcome. Please fork the repository and submit 
 
 If you encounter any bugs or have suggestions, please file an issue on the GitHub repository.
 
-This updated README now correctly directs users to the respective branches for the Tkinter and PyQt components of the application, improving clarity and helping users navigate your project more efficiently.
+
 ```
